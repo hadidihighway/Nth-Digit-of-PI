@@ -5,6 +5,7 @@ __pycache__/
 .pytest_cache/
 .vscode/
 *.log
-dist/
+dist/*
+!dist/Pi.exe
 build/
 *.spec
