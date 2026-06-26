@@ -4,9 +4,10 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont
 
 def nth_digit_of_pi(n):
-    mpmath.mp.dps = n + 1
+    mpmath.mp.dps = n + 5
     pi_string = str(mpmath.pi)
-    return pi_string[n]
+    pi_string = pi_string.replace('.', '')  
+    return pi_string[n - 1]
 
 class MainWindow(QMainWindow):
     def __init__(self):
