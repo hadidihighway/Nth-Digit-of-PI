@@ -51,7 +51,10 @@ class MainWindow(QMainWindow):
         try:
             n = int(text)
         except ValueError:
-            self.result_label.setText("Enter a valid whole number")
+            self.result_label.setText("Enter a valid positive whole number")
+            return
+        if n <= 0:
+            self.result_label.setText("Enter a valid positive whole number")
             return
         digit = nth_digit_of_pi(n)
         self.result_label.setText(f"Digit {n} of Pi is: {digit} ")
